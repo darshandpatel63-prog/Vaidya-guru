@@ -1,0 +1,8 @@
+{
+  "name": "Copy of VaidyaGuru - Comprehensive BAMS Portal",
+  "description": "The ultimate BAMS learning companion. Features full course library, AI diagnosis from images/videos, automated clinical PPTX generation, and multi-language support (Gujarati & English).",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
