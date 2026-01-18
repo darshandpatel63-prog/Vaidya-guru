@@ -4,9 +4,8 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   // Load env file based on `mode` in the current working directory.
-  // This allows the code to read API_KEY from .env or Vercel Environment Variables
-  // Fix: Property 'cwd' does not exist on type 'Process'. Casting process to any to avoid TS error.
-  const env = loadEnv(mode, (process as any).cwd(), '');
+  // We use process.cwd() safely assuming Node environment during build
+  const env = loadEnv(mode, process.cwd(), '');
 
   return {
     plugins: [react()],
